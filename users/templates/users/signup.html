@@ -1,0 +1,28 @@
+{% extends 'users/base.html' %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">  <!-- Increased width from col-md-5 to col-md-8 -->
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h2 class="text-center text-primary mb-3">Sign Up</h2>
+
+                <form method="post" class="px-3">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        {{ form.as_p }}
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Sign Up</button>
+                </form>
+
+                <p class="mt-3 text-center">
+                    Already have an account? 
+                    <a href="{% url 'login' %}" class="text-decoration-none">Login</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'users/base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2 class="text-center mb-4">Welcome to Your Dashboard</h2>
+        
+        <div class="card shadow-sm border-0">
+            <div class="card-body text-center">
+                <h4 class="mb-3">Hi, <strong>{{ user.username }}</strong>! 👋</h4>
+                
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="{% url 'profile' %}" class="btn btn-outline-primary px-4">Profile</a>
+                    <a href="{% url 'change_password' %}" class="btn btn-outline-warning px-4">Change Password</a>
+                    <form method="post" action="{% url 'logout' %}" class="d-inline">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-outline-danger px-4">Logout</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
