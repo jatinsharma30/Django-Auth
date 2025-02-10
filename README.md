@@ -15,6 +15,14 @@ This is a Django-based authentication system that allows users to sign up, log i
 - **Frontend:** HTML, Bootstrap
 - **Database:** SQLite (default)
 
+## Deployment (PythonAnywhere)
+1. Upload your project to PythonAnywhere.
+2. Ensure `.env` is correctly placed and loaded in `wsgi.py`.
+3. Restart the web app from the PythonAnywhere dashboard.
+
+## Hosted Link
+You can access the live project here: [Django Auth App](https://jatinsharma30.pythonanywhere.com/)
+
 ## Installation
 1. Clone the repository:
    ```sh
@@ -51,14 +59,6 @@ This is a Django-based authentication system that allows users to sign up, log i
    ```sh
    python manage.py runserver
    ```
-
-## Deployment (PythonAnywhere)
-1. Upload your project to PythonAnywhere.
-2. Ensure `.env` is correctly placed and loaded in `wsgi.py`.
-3. Restart the web app from the PythonAnywhere dashboard.
-
-## Hosted Link
-You can access the live project here: [Django Auth App](https://jatinsharma30.pythonanywhere.com/)
 
 ## Troubleshooting
 - **Password Reset Email Not Sending?**
