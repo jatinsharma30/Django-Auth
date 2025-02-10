@@ -12,6 +12,9 @@ from django.utils.http import urlsafe_base64_encode
 from django.utils.encoding import force_bytes
 from django.conf import settings
 
+def index(request):
+    return render(request, 'users/index.html')
+
 def signup_view(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
